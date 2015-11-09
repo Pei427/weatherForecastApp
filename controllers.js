@@ -16,7 +16,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     $scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast/daily",{
         callback: "JSON_CALLBACK"}, {get: {method: "JSONP"}});
     
-    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days, appid: "bd82977b86bf27fb59a04b61b657fb6f"});
+    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days, appid: "61806b89c97fb46ae7a95a9ba074c1a3"});
     
     $scope.convertToFahrenheit = function(degK){
         return Math.round((1.8 * (degK - 273)) + 32);
@@ -34,7 +34,7 @@ weatherApp.controller("LineCtrl", ['$scope', '$resource', '$filter', 'cityServic
     $scope.days = 7;
     $scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast/daily",{
         callback: "JSON_CALLBACK"}, {get: {method: "JSONP"}});
-    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days, appid: "bd82977b86bf27fb59a04b61b657fb6f", units: "imperial"});
+    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days, appid: "61806b89c97fb46ae7a95a9ba074c1a3", units: "imperial"});
     //day temp
     $scope.data = [];
     $scope.labels = [];
@@ -64,7 +64,7 @@ weatherApp.controller("LineCtrl", ['$scope', '$resource', '$filter', 'cityServic
     
     
     $scope.labels = $scope.tempLabels;
-    
+   
     
     $scope.series = ['Maximum Temperature', 'Minimum Temperature'];
 
